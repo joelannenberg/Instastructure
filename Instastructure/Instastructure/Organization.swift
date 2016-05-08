@@ -11,24 +11,17 @@ import Parse
 
 class Organization: NSObject {
     
-    var email: NSString?
-    var username: NSString?
-    //var profileUrl: NSURL?
-    var organizationId: NSString?
-    var dictionary: NSDictionary?
-    
-    init(dictionary: NSDictionary) {
-        self.dictionary = dictionary
-        email = PFUser.currentUser()?.email
-        username = PFUser.currentUser()?.username
-        organizationId = PFUser.currentUser()!["organizationId"] as? String
+    class func createOrganization (withName name: String?, withId id: Int?, withCompletion completion: PFBooleanResultBlock?) {
         
-        /* let profileUrlString = dictionary["profile_image_url_https"] as? String
-        if let profileUrlString = profileUrlString {
-            profileUrl = NSURL(string: profileUrlString)
-        } */
-    
+        // Create parse object PFObject
+        let organization = PFObject(className: "Organization")
         
+        // Add relevant fields to the object
+        organization["name"] = PFUser.currentUser()
+        organization["id"] = ""
+        
+        // Save object (following function will save the object in Parse asynchronously)
+        organization.saveInBackgroundWithBlock(completion)
     }
-
+    
 }

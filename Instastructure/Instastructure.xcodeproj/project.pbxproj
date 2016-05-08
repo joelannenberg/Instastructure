@@ -18,6 +18,9 @@
 		5D81594B1CA9D3E000BA42C4 /* InstastructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D81594A1CA9D3E000BA42C4 /* InstastructureUITests.swift */; };
 		5D81595A1CA9D4CA00BA42C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8159591CA9D4CA00BA42C4 /* LoginViewController.swift */; };
 		5D81595C1CA9D8F800BA42C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D81595B1CA9D8F800BA42C4 /* HomeViewController.swift */; };
+		5D83053D1CDE8EC6003DE4C6 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D83053C1CDE8EC6003DE4C6 /* Admin.storyboard */; };
+		5D83053F1CDE8FA3003DE4C6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83053E1CDE8FA3003DE4C6 /* AdminViewController.swift */; };
+		5D8305421CDFA8B7003DE4C6 /* AdminDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8305411CDFA8B7003DE4C6 /* AdminDetailViewController.swift */; };
 		5D8ECE5B1CAC50F400BF66B5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8ECE5A1CAC50F400BF66B5 /* SignInViewController.swift */; };
 		5D8ECE5D1CAC510800BF66B5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8ECE5C1CAC510800BF66B5 /* SignUpViewController.swift */; };
 		5D8ECE5F1CAC606900BF66B5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8ECE5E1CAC606900BF66B5 /* Request.swift */; };
@@ -62,6 +65,9 @@
 		5D81594C1CA9D3E000BA42C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D8159591CA9D4CA00BA42C4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D81595B1CA9D8F800BA42C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5D83053C1CDE8EC6003DE4C6 /* Admin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
+		5D83053E1CDE8FA3003DE4C6 /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		5D8305411CDFA8B7003DE4C6 /* AdminDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminDetailViewController.swift; sourceTree = "<group>"; };
 		5D8ECE5A1CAC50F400BF66B5 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5D8ECE5C1CAC510800BF66B5 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5D8ECE5E1CAC606900BF66B5 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -177,6 +183,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		5D8305401CDE8FA9003DE4C6 /* AdminViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D83053E1CDE8FA3003DE4C6 /* AdminViewController.swift */,
+				5D8305411CDFA8B7003DE4C6 /* AdminDetailViewController.swift */,
+			);
+			name = AdminViewControllers;
+			sourceTree = "<group>";
+		};
 		5D8ECE591CAC4A4500BF66B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				5D81592E1CA9D3E000BA42C4 /* Main.storyboard */,
+				5D83053C1CDE8EC6003DE4C6 /* Admin.storyboard */,
 				5D8159331CA9D3E000BA42C4 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
@@ -220,6 +236,7 @@
 				5D81595B1CA9D8F800BA42C4 /* HomeViewController.swift */,
 				5D8ECE631CAC834200BF66B5 /* RequestViewController.swift */,
 				5D8ECE651CAC835800BF66B5 /* ProfileViewController.swift */,
+				5D8305401CDE8FA9003DE4C6 /* AdminViewControllers */,
 			);
 			name = MainViewControllers;
 			sourceTree = "<group>";
@@ -334,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D83053D1CDE8EC6003DE4C6 /* Admin.storyboard in Resources */,
 				5D8159351CA9D3E000BA42C4 /* LaunchScreen.storyboard in Resources */,
 				5D8159321CA9D3E000BA42C4 /* Assets.xcassets in Resources */,
 				5D8159301CA9D3E000BA42C4 /* Main.storyboard in Resources */,
@@ -409,11 +427,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D83053F1CDE8FA3003DE4C6 /* AdminViewController.swift in Sources */,
 				5D8ECE5D1CAC510800BF66B5 /* SignUpViewController.swift in Sources */,
 				5D81595A1CA9D4CA00BA42C4 /* LoginViewController.swift in Sources */,
 				5D3F0D9D1CAB17F6004E8A19 /* RequestCell.swift in Sources */,
 				5D81592B1CA9D3DF00BA42C4 /* AppDelegate.swift in Sources */,
 				5D8ECE5F1CAC606900BF66B5 /* Request.swift in Sources */,
+				5D8305421CDFA8B7003DE4C6 /* AdminDetailViewController.swift in Sources */,
 				5D8ECE5B1CAC50F400BF66B5 /* SignInViewController.swift in Sources */,
 				5D8ECE661CAC835800BF66B5 /* ProfileViewController.swift in Sources */,
 				5D8ECE641CAC834200BF66B5 /* RequestViewController.swift in Sources */,

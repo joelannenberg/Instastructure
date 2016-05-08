@@ -31,16 +31,17 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func onSignUp(sender: AnyObject) {
-        // initialize a user object
+        // Initialize a user object
         let newUser = PFUser()
         
-        // set user properties
+        // Set user properties
         newUser.username = usernameField.text
         newUser.email = emailField.text
         newUser.password = passwordField.text
-        newUser["organizationId"] = organizationField.text
+        newUser["organization"] = organizationField.text
+        newUser["admin"] = false
         
-        // call sign up function on the object
+        // Call sign up function on the object
         newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
                 print("Created a user :)")

@@ -32,9 +32,16 @@ class SignInViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(emailField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 print("Logged in :)")
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
-                self.presentViewController(vc, animated: true, completion: nil)
+                let admin = user!["admin"] as! Bool
+                if (admin != true) {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+                    self.presentViewController(vc, animated: true, completion: nil)
+                } else {
+                    let storyboard = UIStoryboard(name: "Admin", bundle: nil)
+                    let vc = storyboard.instantiateViewControllerWithIdentifier("AdminViewController")
+                    self.presentViewController(vc, animated: true, completion: nil)
+                }
             } else {
                 print(error?.localizedDescription)
             }

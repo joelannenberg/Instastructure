@@ -43,7 +43,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // construct PFQuery
         let query = PFQuery(className: "Request")
         query.orderByDescending("createdAt")
-        query.includeKey("author")
+        query.whereKey("organization", equalTo: PFUser.currentUser()!["organization"])
         query.limit = 20
         
         // fetch data asynchronously

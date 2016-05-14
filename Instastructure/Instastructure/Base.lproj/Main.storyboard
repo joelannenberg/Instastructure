@@ -459,6 +459,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="JiS-at-P26"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="TUR-F1-E2H" id="T8g-Tg-Eg8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRQ-Ay-zH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

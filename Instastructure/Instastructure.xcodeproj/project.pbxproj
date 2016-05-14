@@ -179,6 +179,7 @@
 			children = (
 				5D8ECE621CAC81DB00BF66B5 /* StarterViewControllers */,
 				5D8ECE671CAC836700BF66B5 /* MainViewControllers */,
+				5D8305401CDE8FA9003DE4C6 /* AdminViewControllers */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -236,7 +237,6 @@
 				5D81595B1CA9D8F800BA42C4 /* HomeViewController.swift */,
 				5D8ECE631CAC834200BF66B5 /* RequestViewController.swift */,
 				5D8ECE651CAC835800BF66B5 /* ProfileViewController.swift */,
-				5D8305401CDE8FA9003DE4C6 /* AdminViewControllers */,
 			);
 			name = MainViewControllers;
 			sourceTree = "<group>";
